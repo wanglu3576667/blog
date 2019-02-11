@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+      *{
+          padding: 0px;
+          margin: 0px;
+          list-style: none;
+      } 
+     .yinyang-out{
+          height: 198px;
+          width: 198px;
+          border: black 1px solid;
+          border-radius: 50%;
+      }
+      .border{
+          width: 198px;
+          height: 99px;
+          background-color: black; 
+          border: 1px black solid;
+          border-radius: 100px 100px 0px 0px;
+          border-bottom: none;
+          position: relative;
+          margin:50px auto;
+      }
+     
+      .yin{
+          width: 100px;
+          height: 100px;
+          background-color: black;
+          border-radius: 100%;
+          position: absolute;
+          top: 50px;
+          left: -1px;
+      }
+      .yang{
+          width: 100px;
+          height: 100px;
+          background-color: white;
+          border-radius: 100%;
+          position: absolute;
+          top: 50px;
+          left: 99px;
+      }
+      .yinyan{
+          width: 20px;
+          height: 20px;
+          border: 1px black solid;
+          border-radius: 50%;
+          background-color: white;
+          position: absolute;
+          top:100px;
+          left: 35px;
+      }
+      .yangyan{
+          width: 20px;
+          height: 20px;
+          border: 1px white solid;
+          border-radius: 50%;
+          background-color: black;
+          position: absolute;
+          top: 100px;
+          left: 140px;
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="border">
+        <div class="yinyang-out"></div>
+        <div class="yin"></div>
+        <div class="yang"></div>
+        <div class="yinyan"></div>
+        <div class="yangyan"></div>
+    </div>
+</body>
+</html>
