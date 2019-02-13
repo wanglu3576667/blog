@@ -63,13 +63,18 @@ header>nav>ul>li>a{
     font-weight:bold;
 }
 /*背景*/
+.container>.nominee{
+    position: absolute;
+    top: 160px;
+    left: 93.5%;
+}
 .container>.bg{
     background-image: url("./images/wallhaven-742984.jpg");
     height: 516px;
     background-size: cover;
     background-position: 0px -80px;
 }
-.container>.bg>.bgc{
+.container>.bg>.shade{
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
 }
@@ -77,8 +82,10 @@ header>nav>ul>li>a{
 .container>main{
     max-width: 930px;
     background-color: white;
+    box-shadow: 0px 0.1px 0.1px 0.1px  #93969b;
     border: #dedede solid 1px;
     margin: 0px auto;
+    margin-top:-349px;
 }
 .container>main>.userCard>.pictureAndText{
     padding: 57px 50px 15px 50px;
@@ -90,7 +97,7 @@ header>nav>ul>li>a{
 
 .container>main>.userCard>.pictureAndText img{
     width: 296px;
-    height: 345px;
+    height: 325px;
 }
 .container>main>.userCard>.pictureAndText .text{
     width: 465px;
@@ -121,11 +128,11 @@ header>nav>ul>li>a{
     padding: 25px 0px 5px 0px;
 }
 .container>main>.userCard>.pictureAndText .text>p{
-    color: #dedede;
+    color: #93969b;
     font-size: 15px;
-    font-weight: bold;
-    font-family: monospace;
-    margin-bottom: 25px;
+    font-family: cursive;
+    margin-top:15px;
+    margin-bottom: 20px;
 }
 .container>main>.userCard>.pictureAndText .text dl>dt{
     font-weight: bold;
@@ -135,9 +142,8 @@ header>nav>ul>li>a{
     margin-bottom: 15px; 
 }
 .container>main>.userCard>.pictureAndText .text dl>dd{
-    font-weight: bold;
     font-family: cursive;
-    color: #dedede;
+    color: #93969b;
     float: left;
     width: 30%;
 }
@@ -161,4 +167,109 @@ header>nav>ul>li>a{
     fill: white;
     padding:10px 10px;
     vertical-align: top;
+}
+.download{
+    text-align: center;
+    margin-top: 30px
+}
+.download> a{
+    display: inline-block;
+    color: #464d59;
+    font-weight: bold;
+    padding:22px 60px;
+    border: solid 0.5px rgb(203, 205, 207);
+    border-radius: 3px;
+}
+.download> a:hover{
+   box-shadow:  0 5px 11px 0 rgba(0, 0, 0, 0.18), 
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transition-duration: 0.5s;
+}
+.mySelf{
+    text-align: center;
+    margin:40px 0;
+}
+.mySelf>span{
+    font-family: cursive;
+    font-weight: bold;
+    margin:40px 0;
+}
+.skill>h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #3d4451;
+}
+.skill>ul{
+    width: 930px;
+    height: 245px;
+    color: #3d4451;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    background-color:white;
+    margin: 0 auto;
+}
+.skill>ul>li{
+    width: 45%;
+    float: left;
+    margin-top:40px;
+}
+.skill>ul>li:nth-child(even){
+    float: right;
+}
+.skill>ul>li:nth-child(odd){
+    margin-left:40px; 
+}
+
+.skill>ul>li>div{
+    height: 5px;
+    width: 90%;
+    background-color:#E8676B;
+    border-radius: 2px;
+}
+.skill>ul>li>.HTML::after{
+    content:'';
+    display: block;
+    background-color: #FAE1E1;
+    float: right;
+    width: 25%;
+    height: 5px;
+}
+.skill>ul>li>.CSS::after{
+    content:'';
+    display: block;
+    background-color: #FAE1E1;
+    float: right;
+    width: 40%;
+    height: 5px;
+}
+.skill>ul>li>.JavaScript::after{
+    content:'';
+    display: block;
+    background-color: #FAE1E1;
+    float: right;
+    width: 33%;
+    height: 5px;
+}
+.skill>ul>li>.Vue::after{
+    content:'';
+    display: block;
+    background-color: #FAE1E1;
+    float: right;
+    width: 25%;
+    height: 5px;
+}
+.skill>ul>li>.JQuery::after{
+    content:'';
+    display: block;
+    background-color: #FAE1E1;
+    float: right;
+    width: 20%;
+    height: 5px;
+}
+.skill>ul>li>.HTTP::after{
+    content:'';
+    display: block;
+    background-color: #FAE1E1;
+    float: right;
+    width: 30%;
+    height: 5px;
 }
