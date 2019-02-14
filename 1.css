@@ -64,7 +64,7 @@ header>nav>ul>li>a{
 }
 /*背景*/
 .container>.nominee{
-    position: absolute;
+    position: fixed;
     top: 160px;
     left: 93.5%;
 }
@@ -187,14 +187,15 @@ header>nav>ul>li>a{
 }
 .mySelf{
     text-align: center;
-    margin:40px 0;
+    margin:75px 0;
 }
 .mySelf>span{
     font-family: cursive;
     font-weight: bold;
     margin:40px 0;
 }
-.skill>h2{
+.skill> h2,
+.showreel> h2{
     text-align: center;
     margin-bottom: 25px;
     color: #3d4451;
@@ -206,6 +207,7 @@ header>nav>ul>li>a{
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color:white;
     margin: 0 auto;
+    margin-bottom: 75px;
 }
 .skill>ul>li{
     width: 45%;
@@ -272,4 +274,77 @@ header>nav>ul>li>a{
     float: right;
     width: 30%;
     height: 5px;
+}
+.showreel{
+    margin-bottom: 200px;
+    text-align: center;
+}
+.showreel> ul{
+    display: inline-block;
+    vertical-align: top;
+}
+.showreel>ul>li{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 12px;
+    background: transparent;
+    color: #3d4451;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+.showreel> .bar{
+    width: 250.5px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+    margin: 0px auto;
+    margin-top: 15px;
+}
+.showreel> ul:hover{
+    cursor: pointer;
+}
+.showreel> .bar> .smallBar{
+    width: 10%;
+    height: 100%;
+    background-color: #e8676b;
+    border-radius: 2px;
+    transition: 1s;
+}
+.showreel> .bar> .smallBar1{
+    width: 40%;
+    height: 100%;
+    background-color: #e8676b;
+    border-radius: 2px;
+    margin-left: 22%;
+    transition: 1s;
+}
+.showreel> .bar> .smallBar2{
+    width: 28%;
+    height: 100%;
+    background-color: #e8676b;
+    border-radius: 2px;
+    margin-left: 72%;
+    transition: 1s;
+}
+.showreel> .work{
+    width: 930px;
+    height: 576px;
+    margin: 20px auto;
+    position: relative;
+}
+.showreel> .work> .work-1{
+    position: absolute;
+    top: 0px;
+    left:0px;
+}
+.showreel> .work> .work-2{
+    position: absolute;
+    top:0px;
+    left: 636px;;
+}
+.showreel> .work> .work-3{
+    position: absolute;
+    top:298px;
+    left: 636px;
 }
