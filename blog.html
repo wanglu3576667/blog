@@ -81,14 +81,14 @@
                     <a href="#showreel">作品</a>
                     <ul>
                         <li><a href="https://wanglu3576667.github.io/JavaStript/navPage/navpage.html">前端世界之门</a></li>
-                        <li><a style='padding-top:0px;' href="https://wanglu3576667.github.io/JavaStript/drawingBoard/drawingBoard.html">破产版小画板</a></li>
+                        <li><a style='padding-top:10px;border-top:#FAFAFA 1px solid;' href="https://wanglu3576667.github.io/JavaStript/drawingBoard/drawingBoard.html">破产版小画板</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="">博客</a>
                     <ul>
                         <li><a href="https://github.com/wanglu3576667">Github</a></li>
-                        <li><a style='padding-top:0px;' href="https://www.jianshu.com/u/60206cc2cbf2">简书</a></li>
+                        <li><a style='padding-top:10px;border-top:#FAFAFA 1px solid;' href="https://www.jianshu.com/u/60206cc2cbf2">简书</a></li>
                     </ul>
                 </li>
                 <li>
@@ -110,8 +110,8 @@
         <div class="bg">
             <div class="shade"></div>
         </div>
-        <main>
-            <div class="userCard" id='userCard'>
+        <main data2='userCard'>
+            <div class="userCard" id='userCard' data="bourn">
                 <div class="pictureAndText clearfix">
                     <div class="picture">
                         <img src="./images/2.jpg" alt="我的大头贴">
@@ -169,36 +169,36 @@
         <section class="mySelf">
             <span>一名资深前端小白菜<br>刚刚开始学习关于前端的各种技能致力于成为一名资深前端大神</span>
         </section>
-        <section class="skill" id="skill">
+        <section class="skill" id="skill" data="bourn" data2='skill'>
             <h2>技能栏</h2>
             <ul>
-                <li>
+                <li class="progerss">
                     HTML
                     <div class="HTML"></div>
                 </li>
-                <li>
+                <li class="progerss">
                     CSS
                     <div class="CSS"></div>
                 </li>
-                <li>
+                <li class="progerss">
                     JavaScript
                     <div class="JavaScript"></div>
                 </li>
-                <li>
+                <li class="progerss">
                     Vue
                     <div class="Vue"></div>
                 </li>
-                <li>
+                <li class="progerss">
                     HTTP
                     <div class="HTTP"></div>
                 </li>
-                <li>
+                <li class="progerss">
                     JQuery
                     <div class="JQuery"></div>
                 </li>
             </ul>
         </section>
-        <section class="showreel" id="showreel">
+        <section class="showreel" id="showreel" data="bourn" data2='showreel'>
             <h2>作品集</h2>
             <ul>
                 <li id="one">ALL</li>
@@ -232,5 +232,6 @@
         barbar.className="smallBar2"
     }
 </script>
+<script src="./tween.js"></script>
 <script src="./1.js"></script>
 </html> 

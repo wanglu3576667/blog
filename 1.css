@@ -24,19 +24,22 @@ transition: linear 0.3s;position: relative;}
 .navbar>nav>.bar>li{float: left;margin:0px 18px 0px 18px;height:24px;box-sizing: border-box;position: relative;}
 .navbar>nav>.bar>.switch::after{content: '';display: block;height: 3px;margin-top:3px; background:#E8676B;
 animation: line linear 0.3s; }
+.navbar>nav>.bar>.scroll::after{content: '';display: block;height: 3px;margin-top:3px; background:#E8676B;
+animation: line linear 0.3s; }
 .navbar>nav>.bar>li>a{font-size: 13px;color:inherit;text-decoration:none;font-weight:bold;}
 .navbar>nav>.bar>li>ul{background-color: white;position: absolute;top:115%;right:100%;word-break: keep-all;
 box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);display: none;}
 .navbar>nav>.bar>li>.lv2{display:block;animation: move 0.3s linear forwards;}
 .navbar>nav>.bar>li>ul>li>a{display:block; padding:10px;color: #3D4451;font-size: 12px;font-family:'vani';
-transition: 0.3s; }
+transition: 0.3s; text-align: center;}
 .navbar>nav>.bar>li>ul>li>a:hover{background-color: #FAFAFA;color:#E8676B;}
 /*背景*/.container>.nominee{position: fixed;top: 160px;left: 93.5%;}
 .container>.bg{background-image: url("./images/wallhaven-742984.jpg");height: 516px;
 background-size: cover;background-position: 0px -80px;}
 .container>.bg>.shade{background-color: rgba(0, 0, 0, 0.7);height: 100%;}
 /*卡片*/.container>main{max-width: 930px;background-color: white;box-shadow: 0px 0.1px 0.1px 0.1px#93969b;
-border: #dedede solid 1px;margin: 0px auto;margin-top:-320px;}
+border: #dedede solid 1px;margin: 0px auto;margin-top:-320px;transform: translateY(30px); transition:transform 1s;}
+.container>.switch{transform: translateY(0px)}
 .container>main>.userCard>.pictureAndText{padding: 57px 50px 15px 50px;}
 .container>main>.userCard>.pictureAndText>.picture{float: left;margin-right: 67px;}
 .container>main>.userCard>.pictureAndText img{width: 296px;height: 325px;}
@@ -66,26 +69,31 @@ border: solid 0.5px rgb(203, 205, 207);border-radius: 3px;}
 transition-duration: 0.5s;}
 .mySelf{text-align: center;margin:75px 0;}
 .mySelf>span{font-family: cursive;font-weight: bold;margin:40px 0;}
+.skill{margin-top:30px;transform: translateY(30px); transition: transform 1s;}
+.skill.switch{transform: translateY(0px);}
 .skill> h2,.showreel> h2{text-align: center;margin-bottom: 25px;color: #3d4451;}
 .skill>ul{width: 930px;height: 245px;color: #3d4451;
 box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);background-color:white;margin: 0 auto;margin-bottom: 75px;}
 .skill>ul>li{width: 45%;float: left;margin-top:40px;}
 .skill>ul>li:nth-child(even){float: right;}
 .skill>ul>li:nth-child(odd){margin-left:40px; }
-.skill>ul>li>div{height: 5px;width: 90%;background-color:#E8676B;border-radius: 2px;}
-.skill>ul>li>.HTML::after{content:'';display: block;background-color: #FAE1E1;
-float: right;width: 25%;height: 5px;}
-.skill>ul>li>.CSS::after{content:'';display: block;background-color: #FAE1E1;
-float: right;width: 40%;height: 5px;}
-.skill>ul>li>.JavaScript::after{content:'';display: block;background-color: #FAE1E1;
-float: right;width: 33%;height: 5px;}
-.skill>ul>li>.Vue::after{content:'';display: block;background-color: #FAE1E1;
-float: right;width: 25%;height: 5px;}
-.skill>ul>li>.JQuery::after{content:'';display: block;background-color: #FAE1E1;
-float: right;width: 20%;height: 5px;}
-.skill>ul>li>.HTTP::after{content:'';display: block;background-color: #FAE1E1;
-float: right;width: 30%;height: 5px;}
-.showreel{margin-bottom: 200px;text-align: center;}
+.skill>ul>li>div{height: 5px;width: 90%;background-color:#FAE1E1;border-radius: 2px;}
+.skill>ul>li>div::after{content:'';display: block;background-color:#E8676B;
+float: left;width: 0%;height: 5px; transition: all 2s;}
+.skill>ul>.progress>.HTML::after{content:'';display: block;background-color:#E8676B;
+float: left;width: 75%;height: 5px;}
+.skill>ul>.progress>.CSS::after{content:'';display: block;background-color: #E8676B;
+float: left;width: 73%;height: 5px;}
+.skill>ul>.progress>.JavaScript::after{content:'';display: block;background-color: #E8676B;
+float: left;width: 76%;height: 5px;}
+.skill>ul>.progress>.Vue::after{content:'';display: block;background-color: #E8676B;
+float: left;width: 72%;height: 5px;}
+.skill>ul>.progress>.JQuery::after{content:'';display: block;background-color: #E8676B;
+float: left;width: 80%;height: 5px;}
+.skill>ul>.progress>.HTTP::after{content:'';display: block;background-color: #E8676B;
+float: left;width: 70%;height: 5px;}
+.showreel{margin-bottom: 200px;text-align: center;transform: translateY(30px); transition: transform 1s;}
+.showreel.switch{transform: translateY(0px)}
 .showreel> ul{display: inline-block;vertical-align: top;}
 .showreel>ul>li{display: inline-block;vertical-align: top;padding: 0 12px;
 background: transparent;color: #3d4451;font-size: 13px;font-weight: 600;font-family: "Open Sans";}
