@@ -1,3 +1,20 @@
+//预加载动画
+var circle = document.querySelector('.cricle');
+setTimeout(function (){
+    circle.classList.add('switch')
+},1000);
+
+//作品集移动下标
+one.onclick=function (){
+    barbar.className="smallBar"
+};
+hehe.onclick=function (){
+    barbar.className="smallBar1"
+};
+three.onclick=function (){
+    barbar.className="smallBar2"
+}
+
 //获取导航栏标签
 var navBar = document.querySelectorAll('.navbar')[0];
 //监听滚动时间
@@ -33,7 +50,6 @@ window.onscroll = function(){
         }
     }
     
-    
     //对应区域的导航目录的链接下标高亮
     let jump = document.querySelectorAll('.navbar>nav>.bar>li>a');
     for (let index = 0;index<jump.length;index++){
@@ -65,6 +81,21 @@ for (let index=0;index<menu.length;index++){
 var jump = document.querySelectorAll('.navbar>nav>.bar>li>a');
 //点击a标签，使页面移动到对应位置
 for (let index=0;index<jump.length;index++){
+    //鼠标移入a标签，给ul添加class类，划入二级菜单
+    jump[index].onmouseenter = function(event){
+        var didi = event.currentTarget.nextSibling;
+        while(didi.tagName !=='UL'){
+            didi=didi.nextSibling;
+            if (didi === null){
+                break;
+            }
+        }
+        if(didi){
+            didi.className ='lv2';
+        }
+        
+    }
+
     jump[index].onclick = function (event){
         event.preventDefault();
         //var href = event.currentTarget.getAttribute('href');
@@ -126,21 +157,6 @@ for (let index=0;index<jump.length;index++){
         },20);
          */
     }
-    //鼠标移入a标签，给ul添加class类，划入二级菜单
-    jump[index].onmouseenter = function(event){
-        var didi = event.currentTarget.nextSibling;
-        while(didi.tagName !=='UL'){
-            didi=didi.nextSibling;
-            if (didi === null){
-                break;
-            }
-        }
-        if(didi){
-            didi.className ='lv2';
-        }
-        
-    }
-    
 }
 
 
