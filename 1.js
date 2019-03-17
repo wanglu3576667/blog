@@ -4,16 +4,6 @@ setTimeout(function (){
     circle.classList.add('switch')
 },1000);
 
-//作品集移动下标
-one.onclick=function (){
-    barbar.className="smallBar"
-};
-hehe.onclick=function (){
-    barbar.className="smallBar1"
-};
-three.onclick=function (){
-    barbar.className="smallBar2"
-}
 
 //获取导航栏标签
 var navBar = document.querySelectorAll('.navbar')[0];

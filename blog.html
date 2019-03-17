@@ -5,17 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./1.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/swiper/dist/css/swiper.min.css">
     <script src="//at.alicdn.com/t/font_1040500_o7ow2wrgrel.js"></script>
-    <style type="text/css">
-        .icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
-        @Keyframes bigloading{ 0%{width:0px;height:0px;opacity:1;} 100%{width:50px;height:50px;opacity:0;}}
-        .cricle{width:100%;height:100vh;position: fixed;top:0px;left:0px; z-index: 99;background-color:#F3F3F3;}
-        .switch.cricle{display: none;}
-        .cricle::before{content:'';display:block;width:50px;height:50px;background:#E8676B;
-        opacity:0.5;border-radius:50%;position:absolute;top:0px;left:0px;bottom:0px;right:0px;margin:auto;animation:bigloading linear 1.6s infinit}
-        .cricle::after{content:'';display:block;width:50px;height:50px;background:#E8676B;
-        border-radius:50%;position:absolute;top:0px;left:0px;bottom:0px;right:0px;margin:auto;animation:bigloading linear 1.6s infinite;animation-duration:0.8s;}
-    </style>
     <title>Mr.wang的个人简历</title>
 </head>
 <body>
@@ -150,22 +141,42 @@
         </section>
         <section class="showreel" id="showreel" data="bourn" data2='showreel'>
             <h2>作品集</h2>
-            <ul>
-                <li id="one">ALL</li>
-                <li id="hehe">PHOTOGRAPHY</li>
-                <li id="three">UX DESIGN</li>
-            </ul>
-            <div class="bar">
-                <div id="barbar" class="smallBar"></div>
-            </div>
-            <div class="work">
-                <div class="work-1"><img src="./images/5.jpg" alt=""></div>
-                <div class="work-2"><img src="./images/6.jpg" alt=""></div>
-                <div class="work-3"><img src="./images/7.jpg" alt=""></div>
-            </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <a target="_blank" class="swiper-slide" href="https://wanglu3576667.github.io/My-Project/%E8%8B%B9%E6%9E%9C%E8%BD%AE%E6%92%AD%EF%BC%88%E4%BB%BF%E5%88%B6%EF%BC%89/apple.html"><img src="images/apple.jpg" ></a>
+                        <a target="_blank" class="swiper-slide" href="https://wanglu3576667.github.io/My-Project/drawingBoard/drawingBoard.html"><img src="images/canvas.jpg" ></a>
+                        <a target="_blank" class="swiper-slide" href="https://wanglu3576667.github.io/My-Project/navPage/navpage.html"><img src="images/keyboard.jpg" ></a>
+                    </div>
+                    <div class="swiper-button-prev prev"></div>
+                    <div class="swiper-button-next"></div>
+                   <div class="swiper-pagination"></div>
+                </div>  
         </section>
     </div>
 </body>
 <script src="./tween.js"></script>
+<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
 <script src="./1.js"></script>
+
+
+<script>
+        var mySwiper = new Swiper ('.swiper-container', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+      
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+      
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+      
+         
+        })
+        </script>
 </html> 
