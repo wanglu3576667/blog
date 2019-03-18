@@ -5,7 +5,6 @@ hr{border:transparent solid 1px;border-top: #E8676B 1px solid;margin-bottom: 25p
 @keyframes line{0%{width: 0%;}100%{width: 100%;}}
 @keyframes move{0%{right: 100%;}100%{right: 0%;}}
 .icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
-.swiper-container {width: 930px;height: 510px; }
 @Keyframes bigloading{ 0%{width:0px;height:0px;opacity:1;} 100%{width:50px;height:50px;opacity:0;}}
 .cricle{width:100%;height:100vh;position: fixed;top:0px;left:0px; z-index: 99;background-color:#F3F3F3;}
 .switch.cricle{display: none;}
@@ -47,7 +46,8 @@ border: #dedede solid 1px;margin: 0px auto;margin-top:-320px;transform: translat
 .container>.switch{transform: translateY(0px)}
 .container>main>.userCard>.pictureAndText{padding: 57px 50px 15px 50px;}
 .container>main>.userCard>.pictureAndText>.picture{float: left;margin-right: 67px;}
-.container>main>.userCard>.pictureAndText img{width: 296px;height: 325px;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.48)}
+.container>main>.userCard>.pictureAndText img{width: 296px;height: 325px;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.48);transition: 0.3s;}
+.container>main>.userCard>.pictureAndText img:hover{box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4), 0 1px 6px rgba(0, 0, 0, 0.48)}
 .container>main>.userCard>.pictureAndText .text{width: 465px;float: left;}
 .container>main>.userCard>.pictureAndText .text .sayHello>.hello{display: inline-block;padding: 6px 12px;
 font-size:13px;font-weight: bold;color:white;background-color: #E8676B;}
@@ -92,5 +92,10 @@ background-color:white;margin: 0 auto;margin-bottom: 75px;}
 .skill>ul>.progress>.HTTP::after{content:'';display: block;background-color: #E8676B;float: left;width: 70%;height: 5px;}
 .showreel{margin-bottom: 200px;text-align: center;transform: translateY(30px); transition: transform 1s;}
 .showreel.switch{transform: translateY(0px)}
-.showreel:hover .swiper-container{box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.48);}
+.swiper-container {width: 930px;height: 510px; transition: 0.5s; }
+.showreel:hover .swiper-container{box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.48);}
+.swiper-button-prev.prev,.swiper-button-next.next{width: 30px;height: 60px;transition: 0.5s;}
+.swiper-button-prev.prev:hover{width: 30px;height: 70px;margin-top:-25px; background-color: rgba(8, 8, 8, 0.25);}
+.swiper-button-next.next:hover{width: 30px;height: 70px;margin-top:-25px; background-color: rgba(8, 8, 8, 0.25);}
+
 
