@@ -76,7 +76,7 @@ transition-duration: 0.5s;}
 .mySelf>span{font-family: cursive;font-weight: bold;margin:40px 0;}
 .skill{margin-top:30px;transform: translateY(30px); transition: transform 1s;}
 .skill.switch{transform: translateY(0px);}
-.skill> h2,.showreel> h2{text-align: center;margin-bottom: 25px;color: #3d4451;}
+.skill> h2,.showreel> h2,.message-out>h2{text-align: center;margin-bottom: 25px;color: #3d4451;}
 .skill>ul{width: 930px;height: 245px;color: #3d4451;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 background-color:white;margin: 0 auto;margin-bottom: 75px;}
 .skill>ul>li{width: 45%;float: left;margin-top:40px;}
@@ -90,12 +90,18 @@ background-color:white;margin: 0 auto;margin-bottom: 75px;}
 .skill>ul>.progress>.Vue::after{content:'';display: block;background-color: #E8676B;float: left;width: 72%;height: 5px;}
 .skill>ul>.progress>.JQuery::after{content:'';display: block;background-color: #E8676B;float: left;width: 80%;height: 5px;}
 .skill>ul>.progress>.HTTP::after{content:'';display: block;background-color: #E8676B;float: left;width: 70%;height: 5px;}
-.showreel{margin-bottom: 200px;text-align: center;transform: translateY(30px); transition: transform 1s;}
+.showreel{margin-bottom:75px;text-align: center;transform: translateY(30px); transition: transform 1s;}
 .showreel.switch{transform: translateY(0px)}
 .swiper-container {width: 930px;height: 510px; transition: 0.5s; }
 .showreel:hover .swiper-container{box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.48);}
 .swiper-button-prev.prev,.swiper-button-next.next{width: 30px;height: 60px;transition: 0.5s;}
 .swiper-button-prev.prev:hover{width: 30px;height: 70px;margin-top:-25px; background-color: rgba(8, 8, 8, 0.25);}
 .swiper-button-next.next:hover{width: 30px;height: 70px;margin-top:-25px; background-color: rgba(8, 8, 8, 0.25);}
+.message-out{transform: translateY(30px); transition: transform 1s;}
+.message-out.switch{transform: translateY(0px)}
+.message-out>.displayArer{width:930px;margin:0px auto;border: 1px black solid;border-bottom:none;margin-bottom: 1000px;}
+.message-out>.displayArer>li{padding:18px;border-bottom: black 1px solid;color: #3d4451;font-family: cursive;font-weight: bold;}
+.message-out>.displayArer>li:first-child{padding:10px;border-bottom: black 1px solid;text-align: center;color: #3d4451;
+font-family: cursive;font-weight: bold;}
 
 

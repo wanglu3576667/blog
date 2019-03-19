@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./1.css" type="text/css">
-    <link rel="stylesheet" href="./abc/swiper/dist/css/swiper.min.css">
-    <script src="//at.alicdn.com/t/font_1040500_o7ow2wrgrel.js"></script>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="./swiperBank/swiper/dist/css/swiper.min.css">
     <title>Mr.wang的个人简历</title>
 </head>
 <body>
@@ -24,9 +23,16 @@
                 <li>
                     <a href="#showreel">作品</a>
                     <ul>
-                        <li><a href="https://wanglu3576667.github.io/JavaStript/navPage/navpage.html"><span>前端世界之门<span></a></li>
-                        <li><a style='border-top:#FAFAFA 1px solid;' href="https://wanglu3576667.github.io/JavaStript/drawingBoard/drawingBoard.html">破产版小画板</a></li>
+                        <li><a target="_blank" href="https://wanglu3576667.github.io/My-Project/navPage/navpage.html"><span>破产版导航器<span></a></li>
+                        <li><a target="_blank" href="https://wanglu3576667.github.io/My-Project/%E8%8B%B9%E6%9E%9C%E8%BD%AE%E6%92%AD%EF%BC%88%E4%BB%BF%E5%88%B6%EF%BC%89/apple.html"><span>苹果风格轮播<span></a></li>
+                        <li><a target="_blank" style='border-top:#FAFAFA 1px solid;' href="https://wanglu3576667.github.io/My-Project/drawingBoard/drawingBoard.html">破产版小画板</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="#message-out">联系方式</a>
+                </li>
+                <li>
+                    <a href="">日历</a>
                 </li>
                 <li>
                     <a href=""><span>博客</span></a>
@@ -34,12 +40,6 @@
                         <li><a href="https://github.com/wanglu3576667"><span>Github</span></a></li>
                         <li><a style='border-top:#FAFAFA 1px solid;' href="https://www.jianshu.com/u/60206cc2cbf2"><span>简书</span></a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="">日历</a>
-                </li>
-                <li>
-                    <a href="">联系方式</a>
                 </li>
                 <li>
                     <a href="">其他</a>
@@ -152,31 +152,34 @@
                    <div class="swiper-pagination"></div>
                 </div>  
         </section>
+        <section class="message-out" id="message-out" data="bourn" data2='message-out'>
+            <h2>留言板</h2>
+            <ul class="displayArer">
+                <li> 
+                    <form action="">
+                        <label>姓名：<input type="text" name="name" placeholder="请输入您姓名" value=""></label>
+                        <label>留言:<input type="text" name="import" placeholder="请输入您的留言" value=""></label>
+                        <input type="submit" name = "submit" value="提交">
+                    </form>
+                </li>
+            </ul>
+        </section>
     </div>
 </body>
-<script src="./tween.js"></script>
-<script src="./abc/swiper/dist/js/swiper.min.js"></script>
-<script src="./1.js"></script>
 
-
-<script>
-        var mySwiper = new Swiper ('.swiper-container', {
-          // Optional parameters
-          direction: 'horizontal',
-          loop: true,
-      
-          // If we need pagination
-          pagination: {
-            el: '.swiper-pagination',
-          },
-      
-          // Navigation arrows
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-      
-         
-        })
-        </script>
+<!--plug-in-JS-->
+<script src="//at.alicdn.com/t/font_1040500_o7ow2wrgrel.js"></script>
+<script src="./tween-JS/tween.js"></script>
+<script src="./swiperBank/swiper/dist/js/swiper.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
+<!--模块化-->
+<script src="./JS-lump/loading.js"></script>
+<script src="./JS-lump/swich-navbar.js"></script>
+<script src="./JS-lump/swipre.js"></script>
+<script src="./JS-lump/swich-lineDown.js"></script>
+<script src="./JS-lump/shiftInSecondaryMenu.js"></script>
+<script src="./JS-lump/scroll-window.js"></script>
+<script src="./JS-lump/click-scroll.js"></script>
+<script src="./JS-lump/scroll-sub-mark.js"></script>
+<script src="./JS-lump/message.js"></script>
 </html> 
