@@ -17,30 +17,16 @@
       var messageboard = new TestObject();
       var IMPORT  = contorller.FORM.querySelector('input[name=import]').value
       var NAME = contorller.FORM.querySelector('input[name=name]').value
-      messageboard.save({
+      return messageboard.save({
         'Name' : NAME,
         'Import' : IMPORT
-      }).then( function(object) {
-                alert('发送成功');
-                var li = document.createElement('li')
-                li.innerText = `${NAME}:${IMPORT}`
-                this.ul.appendChild(li)
-              }.bind(contorller), function(){alert('发送失败')} )
+      })
       },
 
-      find : function(){
-              var query = new AV.Query('TestObject');
-              query.find().then(function (todos) {
-              var arr = todos.map(function(value){
-                                    return value.attributes
-                                  })
-              arr.forEach(function(value){
-                            var li = document.createElement('li')
-                            li.innerText = `${value.Name}:${value.Import}`
-                            this.ul.appendChild(li)
-                            }.bind(contorller))
-                          })
-            }
+    find : function(){
+            var query = new AV.Query('TestObject');
+            return query.find()
+          }
   }
 
   var contorller = {
@@ -52,7 +38,12 @@
       bindEvents : function (){
                     this.FORM.addEventListener('submit',function(event){
                                                           event.preventDefault()
-                                                          model.save()
+                                                          model.save().then( function(object) {
+                                                            alert('发送成功');
+                                                            var li = document.createElement('li')
+                                                            li.innerText = `${object.attributes.Name}:${object.attributes.Import}`
+                                                            this.ul.appendChild(li)
+                                                          }.bind(contorller), function(){alert('发送失败')} )
                                                         }.bind(this))
         
                     },
@@ -64,7 +55,16 @@
               this.NAME = this.FORM.querySelector('input[name=name]').value
               this.ul = this.view.querySelector('.displayArer')
               model.init()
-              model.find.call(this)
+              model.find().then(function (todos) {
+                var arr = todos.map(function(value){
+                                      return value.attributes
+                                    })
+                arr.forEach(function(value){
+                              var li = document.createElement('li')
+                              li.innerText = `${value.Name}:${value.Import}`
+                              this.ul.appendChild(li)
+                              }.bind(contorller))
+                            })
               this.bindEvents()
             }
   }
