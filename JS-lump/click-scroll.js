@@ -1,16 +1,13 @@
 !function (){
-    var view = document.querySelector('.navbar>nav>.bar');
+    var view = View('.navbar>nav>.bar');
     
-    var contorller = {
-            view : null,   
-            jump : null,
-
-            init : function (view){
-                this.view = view
-                this.jump = view.querySelectorAll('li>a')
+    var contorller = Contorller.call(null,{
+           
+            init : function (){
+                this.view = this.view
+                this.jump = this.view.querySelectorAll('li>a')
                 this.bindEvents()   
             },
-
             initAnimation : function (){
                  function animate(time) {
                     requestAnimationFrame(animate);
@@ -18,7 +15,6 @@
                 }
                 requestAnimationFrame(animate);
             },
-
             bindEvents : function (){
                 for (let index = 0;index < this.jump.length;index++){
                     this.jump[index].onclick = function (event){
@@ -34,10 +30,10 @@
                             window.scrollTo(0,coords.y);
                         })
                         .start();  
-                    }.bind(this)
+                    }.bind(contorller)
                 }
             }
-    }
-
-    contorller.init(view)
+    })
+contorller.init(view)
 }.call()
+    

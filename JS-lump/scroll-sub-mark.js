@@ -1,11 +1,9 @@
 !function (){
-    var view = document.querySelector('.navbar>nav>.bar');
-    var contorller = {
-        view : null,
-        jump : null,
-        href : null,
-        init :function (view){
-            this.view = view
+    var view = View('.navbar>nav>.bar');
+    var contorller = Contorller.call(null,{
+        
+        init :function (){
+            this.view = this.view
             this.jump = this.view.querySelectorAll('li>a')
             this.bindEvents()
         },
@@ -20,9 +18,11 @@
                         this.jump[index].parentElement.classList.add('scroll');
                     }
                 }
-            }.bind(this))
-
+            }.bind(contorller))
         }
-    } 
+
+    })
+
     contorller.init(view)
+    
 }.call()

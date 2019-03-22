@@ -1,17 +1,11 @@
 !function (){
     var view = document.querySelectorAll('[data=bourn]')
     
-    var contorller = {
-        view : null,
-        href : null,
-        progerss : null,
-        elementUp : null,
-
-        init : function (view){
-            this.view = view
+    var contorller = Contorller.call(null,{
+        init : function (){
+            this.view = this.view
             this.bindEvents()
         }, 
-
         bindEvents : function (){
             window.addEventListener('scroll',function(){
                 this.findMinElement()
@@ -27,7 +21,6 @@
                 }
             }.bind(this))
         },
-
         findMinElement :function (){
             var index_min = 0;
             var bourn = this.view;
@@ -40,8 +33,7 @@
             this.progress = document.querySelectorAll('.progerss');
             this.elementUp = document.querySelectorAll('[data2]');
         }
-
-    }
+    })
     contorller.init(view)
 }.call()
 
