@@ -1,5 +1,4 @@
 !function (){
-<<<<<<< HEAD
 
   var view =  View('.message-out')
 
@@ -43,12 +42,10 @@
 
 contorller.init(view,model)
 
-=======
-  var view =  document.querySelector('.message-out')          //MVC里面的V，view视口的意思，因为html对用户可见，用来获取DOM节点。
 
+  var view =  document.querySelector('.message-out')          
   var model = {                                    
-                                                      /*MVC里面的M，需要对后端数据库进行的操作都在这个对象中，有三个方法：init初始化，save上传，
-                                                      find获取*/
+                                                      
     init : function (){
             var APP_ID = '2UnQqjtGo6o8QL7Df8GDKCpD-gzGzoHsz';
             var APP_KEY = 'eQh4KK9rTXXvfydLP8kUbVgM';
@@ -76,9 +73,7 @@ contorller.init(view,model)
           }
   }
 
-  var contorller = {                    /*MVC里面的C，contorller控制器的意思，用来操作V和M，他们的具体实现都在contorller对象中完成。该对象有
-                                          三个重要属性：view属性代表需要进行操作的DOM；init方法代表初始化所有属性，是所有操作的根本，所动作都要
-                                          通过调用该方法实现；bindEvents方法代表绑定事件，主要操作都在该方法内，需要在init方法内调用该方法*/
+  var contorller = {                    
       view : null,
       FORM : null,
       IMPORT : null,
@@ -120,7 +115,6 @@ contorller.init(view,model)
 
   contorller.init(view)
   
->>>>>>> a0bf33ce24146ba7173cc386f43c7b67fba0fa76
 }.call()
 
 
