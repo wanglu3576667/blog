@@ -5,7 +5,7 @@
            
             init : function (){
                 this.view = this.view
-                this.jump = this.view.querySelectorAll('li>a')
+                this.jump = this.view.querySelectorAll('li>.a')
                 this.bindEvents()   
             },
             initAnimation : function (){
