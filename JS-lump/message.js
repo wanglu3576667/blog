@@ -10,7 +10,17 @@
           function(event){
             event.preventDefault()
             var IMPORT  = contorller.FORM.querySelector('input[name=import]').value
+            if (IMPORT.match(/^\s*$/) ){
+              alert('内容不能为空')
+              return
+            }
+            IMPORT=IMPORT.trim()
+            
             var NAME = contorller.FORM.querySelector('input[name=name]').value
+            if (NAME.match(/^\s*$/)){
+              alert('姓名不能为空')
+              return
+            }
             this.model.save({'Name' : NAME,'Import' : IMPORT})
               .then( function(object) {
                 alert('发送成功');
